@@ -1,0 +1,105 @@
+nav {
+    display: inline;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: clamp(5px, 3vw, 10px);
+    box-shadow: 0px 2px 5px #0000009a;
+    background-color: #181818;
+    color: #fff;
+    transition: .3s;
+    z-index: 1000;
+}
+
+.navWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navSection1 {
+    display: flex;
+    align-items: center;
+}
+
+.navSection2 {
+
+}
+
+nav h1 {
+    font-weight: 900;
+    font-size: clamp(1.1rem, 5vw, 2rem);
+    margin-left: clamp(5px, 2vw, 25px);
+}
+
+.navHam {
+    display: grid;
+    gap: 5px;
+    justify-items: right;
+    transition: .15s;
+    cursor: pointer;
+}
+
+.navHam .line {
+    height: 5px;
+    width: 28px;
+    background-color: #fff;
+    border-radius: 2px;
+    transform-origin: left;
+    transition: .3s;
+}
+
+.navButton li {
+    letter-spacing: 2px;
+}
+
+.navButton {
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    font-weight: 600;
+    list-style: none;
+    display: grid;
+    height: 0;
+    opacity: 0;
+    align-content: space-between;
+    text-align: left;
+    font-size: 1.2rem;
+    transition: height .3s, opacity .15s;
+}
+
+.eachNavButton {
+    cursor: pointer;
+}
+
+.eachNavButton:hover {
+    text-decoration: underline;
+}
+
+.mode {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 28px;
+    width: 50px;
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #000000;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.switch {
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: #212121;
+    box-shadow: 0px 0px 5px #000000;
+    transition: .3s;
+}
+

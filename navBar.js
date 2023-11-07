@@ -37,12 +37,19 @@ navHam.addEventListener('click', () => {
     }
 })
 
+// Dark and light mode
 let nightMode = true
 modeButton.addEventListener('click', () => {
     if (nightMode) {
         modeSwitch.style.left = '32px'
-        body.style.backgroundColor = '#fff'
+        body.style.backgroundColor = '#B4DDFF'
         body.style.color = '#000'
+        document.querySelector(':root').style.setProperty('--dullColor', '#B4DDFF10, #B4DDFF20, #B4DDFF');
+        document.querySelector(':root').style.setProperty('--titleColor', '#00000080')
+        document.querySelector(':root').style.setProperty('--stroke', '4px #000')
+        document.querySelector('.mainHeading').style.color = '#fff'
+        document.querySelector('.mainHeading').style.textShadow = '0px 0px 10px #fff'
+
 
         nightMode = false
     } else {
@@ -50,6 +57,14 @@ modeButton.addEventListener('click', () => {
         body.style.backgroundColor = '#212121'
         body.style.color = '#fff'
 
+        //It will change theme of the page
+        document.querySelector(':root').style.setProperty('--dullColor', '#21212160, #21212170, #212121');
+        document.querySelector(':root').style.setProperty('--titleColor', '#ffffff80')
+        document.querySelector(':root').style.setProperty('--stroke', '3px #fff')
+        document.querySelector('.mainHeading').style.color = '#000'
+        document.querySelector('.mainHeading').style.textShadow = '0px 0px 5px #000'
+
+        
         nightMode = true
     }
 })

@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-article {
+:root {
+    --dullColor: #21212160, #21212170, #212121;
+    --titleColor: #ffffff80;
+    --stroke: 2px #fff;
 }
 
 .frontPage {
     position: relative;
-    background-image: url(/assests/blueLight.jpg);
+    background-image: url(https://cdn.dribbble.com/userupload/10648924/file/original-ab34170f9c8ec55b8039409c4d3824f3.png?resize=1024x1500);
     background-size: cover;
     height: 100vh;
     z-index: 1;
@@ -18,8 +21,7 @@ article {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000000;
-    opacity: 0.5;
+    background-image: linear-gradient(to bottom, var(--dullColor));
     z-index: -1;
 }
 
@@ -31,7 +33,7 @@ article {
     text-align: center;
     font-size: clamp(5rem, 15vw, 7rem);
     font-family: 'Lilita One', Arial, Helvetica, sans-serif;
-    -webkit-text-stroke: 2px #fff;
+    -webkit-text-stroke: var(--stroke);
     text-shadow: 0px 0px 10px #000;
     color: #000;
     letter-spacing: 2px;
@@ -40,7 +42,7 @@ article {
 
 .mainHeading::after {
     content: '';
-    background: #ffffff80;
+    background-color: var(--titleColor);
     position: absolute;
     top: 0;
     left: 0;
@@ -51,3 +53,29 @@ article {
     z-index: -1;
 }
 
+.blog {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog h1 {
+    font-size: clamp(2em, 5vw, 5em);
+    padding-top: 10px;
+}
+
+.blog p {
+    font-size: clamp(1em, 3vw, 1.3em);
+    padding: 20px 0;
+    opacity: .8;
+}
+
+.blog ul {
+    font-size: clamp(1em, 3vw, 1.3em);
+    padding-left: 30px;
+    opacity: .8;
+}
+
+.blog span {
+    font-weight: 700;
+}

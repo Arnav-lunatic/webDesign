@@ -137,11 +137,22 @@
     background-color: #fff;
     width: 5vw;
     max-width: 20px;
-    height: 75%;
+    height: 100%;
     margin-right: 5px;
     opacity: .8;
 }
 
 .img {
     box-shadow: 0 0 10px #000;
+}
+
+.midImg {
+    width: 100vw;
+    max-width: 600px;
+    margin: 10px;
+}
+
+.midText {
+    width: 100vw;
+    max-width: 600px;
 }
